@@ -1,0 +1,11 @@
+C:\Users\jacob.shiohira\Documents\Visual Studio 2017\Projects\CustomVision\CustomVision\bin\Debug\netcoreapp2.0\CustomVision.deps.json
+C:\Users\jacob.shiohira\Documents\Visual Studio 2017\Projects\CustomVision\CustomVision\bin\Debug\netcoreapp2.0\CustomVision.runtimeconfig.json
+C:\Users\jacob.shiohira\Documents\Visual Studio 2017\Projects\CustomVision\CustomVision\bin\Debug\netcoreapp2.0\CustomVision.runtimeconfig.dev.json
+C:\Users\jacob.shiohira\Documents\Visual Studio 2017\Projects\CustomVision\CustomVision\bin\Debug\netcoreapp2.0\CustomVision.dll
+C:\Users\jacob.shiohira\Documents\Visual Studio 2017\Projects\CustomVision\CustomVision\obj\Debug\netcoreapp2.0\CustomVision.csprojResolveAssemblyReference.cache
+C:\Users\jacob.shiohira\Documents\Visual Studio 2017\Projects\CustomVision\CustomVision\obj\Debug\netcoreapp2.0\CustomVision.csproj.CoreCompileInputs.cache
+C:\Users\jacob.shiohira\Documents\Visual Studio 2017\Projects\CustomVision\CustomVision\obj\Debug\netcoreapp2.0\CustomVision.AssemblyInfoInputs.cache
+C:\Users\jacob.shiohira\Documents\Visual Studio 2017\Projects\CustomVision\CustomVision\obj\Debug\netcoreapp2.0\CustomVision.AssemblyInfo.cs
+C:\Users\jacob.shiohira\Documents\Visual Studio 2017\Projects\CustomVision\CustomVision\bin\Debug\netcoreapp2.0\CustomVision.pdb
+C:\Users\jacob.shiohira\Documents\Visual Studio 2017\Projects\CustomVision\CustomVision\obj\Debug\netcoreapp2.0\CustomVision.dll
+C:\Users\jacob.shiohira\Documents\Visual Studio 2017\Projects\CustomVision\CustomVision\obj\Debug\netcoreapp2.0\CustomVision.pdb
