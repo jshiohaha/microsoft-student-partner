@@ -1,0 +1,6 @@
+CustomVision/CustomVision/bin/
+CustomVision/CustomVision/Debug/
+CustomVision/CustomVision/debug/
+CustomVision/CustomVision/obj/
+CustomVision/.vs/
+.gitignore

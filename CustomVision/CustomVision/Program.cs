@@ -11,13 +11,40 @@ namespace CustomVision
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter a local image URL: ");
-            var imagePath = Console.ReadLine();
             MemoryStream testImage = null;
+            Guid projectId;
+            string predictionKey;
 
             try
             {
+                Console.Write("Enter a local image URL: ");
+                var imagePath = Console.ReadLine();
                 testImage = new MemoryStream(File.ReadAllBytes(imagePath));
+
+                Console.Write("Enter Project Id Guid: ");
+                var projectIdGuid = Console.ReadLine();
+                projectId = Guid.Parse(projectIdGuid);
+
+                Console.Write("Enter Prediction Key: ");
+                predictionKey = Console.ReadLine();
+
+                Console.WriteLine();
+                Console.WriteLine();
+
+                // Utilizing the Microsoft.Cognitive.CustomVision NuGet Package to establish Credentials and the Endpoint
+                PredictionEndpointCredentials predictionEndpointCredentials = new PredictionEndpointCredentials(predictionKey);
+                PredictionEndpoint endpoint = new PredictionEndpoint(predictionEndpointCredentials);
+
+                ImagePredictionResultModel result = endpoint.PredictImage(projectId, testImage);
+
+                Console.WriteLine("Prediction results for the given image are...");
+                foreach (ImageTagPrediction prediction in result.Predictions)
+                {
+                    Console.WriteLine($"{prediction.Tag}: {prediction.Probability:P1}");
+                }
+
+                Console.WriteLine();
+                exitInNSeconds(5);
             }
             catch (Exception ex)
             {
@@ -26,31 +53,6 @@ namespace CustomVision
                 Console.WriteLine();
                 exitInNSeconds(5);
             }
-
-            Console.Write("Enter Project Id Guid: ");
-            var projectIdGuid = Console.ReadLine();
-            Guid projectId = Guid.Parse(projectIdGuid);
-
-            Console.Write("Enter Prediction Key Guid: ");
-            var predictionKey = Console.ReadLine();
-
-
-            Console.WriteLine();
-            Console.WriteLine();
-
-            // Utilizing the Microsoft.Cognitive.CustomVision NuGet Package to establish Credentials and the Endpoint
-            PredictionEndpointCredentials predictionEndpointCredentials = new PredictionEndpointCredentials(predictionKey);
-            PredictionEndpoint endpoint = new PredictionEndpoint(predictionEndpointCredentials);
-
-            ImagePredictionResultModel result = endpoint.PredictImage(projectId, testImage);
-
-            Console.WriteLine("Prediction results for the given image are...");
-            foreach (ImageTagPrediction prediction in result.Predictions)
-            {
-                Console.WriteLine($"{prediction.Tag}: {prediction.Probability:P1}");
-            }
-
-            exitInNSeconds(5);
         }
 
         public static void exitInNSeconds(int seconds)
